@@ -11,7 +11,6 @@ module.exports = (req, res, next) => {
         res.status(401).json({ message: "No shoes, no shirt.......no token" });
       } else {
         req.token = decodedToken;
-
         next();
       }
     });
